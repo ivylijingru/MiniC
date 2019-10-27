@@ -11,7 +11,7 @@
 ## 参考内容
 - https://github.com/lspaulucio/cc-trab3  参考其中语法树部分，如树节点结构、新建树
 - Modern Compiler Implementation in C     参考其中符号表部分
-
+- https://github.com/LC-John/MiniC-Compiler 以前学长的完整 project
 ## 待扩充
 - 错误发生时报 warning
 - 函数符号表的建立，以及查重
