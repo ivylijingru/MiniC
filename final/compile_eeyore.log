@@ -1,0 +1,21 @@
+bison -v parser.y
+parser.y: warning: 1 shift/reduce conflict [-Wconflicts-sr]
+flex scanner.l
+gcc -Wall -o eeyore scanner.c parser.c ast.c util.c table.c symbol.c -ly
+parser.y: In function ‘main’:
+parser.y:282:16: warning: zero-length gnu_printf format string [-Wformat-zero-length]
+         printf("");
+                ^
+table.c: In function ‘TAB_enter’:
+table.c:56:14: warning: cast from pointer to integer of different size [-Wpointer-to-int-cast]
+     index = ((unsigned)key) % TABSIZE;
+              ^
+table.c: In function ‘TAB_look’:
+table.c:68:12: warning: cast from pointer to integer of different size [-Wpointer-to-int-cast]
+     index=((unsigned)key) % TABSIZE;
+            ^
+table.c: In function ‘TAB_pop’:
+table.c:81:14: warning: cast from pointer to integer of different size [-Wpointer-to-int-cast]
+     index = ((unsigned)k) % TABSIZE;
+              ^
+Done.
