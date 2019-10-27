@@ -12,6 +12,11 @@
 - https://github.com/lspaulucio/cc-trab3  参考其中语法树部分，如树节点结构、新建树
 - Modern Compiler Implementation in C     参考其中符号表部分
 - https://github.com/LC-John/MiniC-Compiler 以前学长的完整 project
+
+## 待解决
+- label 的重复生成，if else 嵌套时可能出现 `l0:\nl1:\n` 的情况
+- 所有的 `if` 语句都用 `if tx == 0 goto lx` 做的，有些情况下可以直接用逻辑变量连接。
+
 ## 待扩充
 - 错误发生时报 warning
 - 函数符号表的建立，以及查重
