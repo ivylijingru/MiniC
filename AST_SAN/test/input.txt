@@ -1,0 +1,231 @@
+PARSE SUCESSFUL!
+var t0
+var t1
+var t2
+var t3
+var t4
+var t5
+var t6
+var t7
+var t8
+var t9
+var t10
+var t11
+var t12
+var t13
+var t14
+var t15
+var t16
+var t17
+var t18
+var t19
+var t20
+var t21
+var t22
+var t23
+var t24
+var t25
+f_f[1]
+  var T2
+  t0=T2<2
+  if t0==0 goto l0
+  return 1
+l0:
+  t1=T2-1
+  param t1
+  t2 = call f_f
+  t3=T2-2
+  param t3
+  t4 = call f_f
+  t5=t2+t4
+  return t5
+end f_f
+f_g[1]
+  var T3
+  var 40 T4
+  t6=4*0
+  T4[t6]=1
+  var T5
+  T5=2
+l1:
+  t7=T3+1
+  t8=T5<t7
+  if t8==0 goto l2
+  t9=4*T5
+  t10=T5-1
+  t11=4*t10
+  t12=T5-2
+  t13=4*t12
+  t14=T4[t11]+T4[t13]
+  T4[t9]=t14
+  goto l1
+l2:
+  t15=4*T3
+  return T4[t15]
+end f_g
+var T6
+f_main[0]
+  t16 = call f_getint
+  T6=t16
+  t17=T6<0
+  t18=T6>30
+  t19=t17||t18
+  if t19==0 goto l3
+  return 1
+l3:
+  param T6
+  t20 = call f_f
+  param t20
+  t21 = call f_putint
+  call f_putint
+  param 10
+  t22 = call f_putchar
+  call f_putchar
+  param T6
+  t23 = call f_g
+  param t23
+  t24 = call f_putint
+  call f_putint
+  param 10
+  t25 = call f_putchar
+  call f_putchar
+  return 0
+end f_main
+Text: root --Pos: -1 -- Count: 2
+	|Text: func_decl_list --Pos: -1 -- Count: 7
+	|	|Text: func_decl --Pos: -1 -- Count: 1
+	|	|	|Text: func_header --Pos: -1 -- Count: 2
+	|	|	|	|Data: getint --Text: id --Pos: 0 -- Count: 0
+	|	|	|	|Text: param_list --Pos: -1 -- Count: 0
+	|	|Text: func_decl --Pos: -1 -- Count: 1
+	|	|	|Text: func_header --Pos: -1 -- Count: 2
+	|	|	|	|Data: putchar --Text: id --Pos: 1 -- Count: 0
+	|	|	|	|Text: param_list --Pos: -1 -- Count: 1
+	|	|	|	|	|Text: var --Pos: 0 -- Count: 0
+	|	|Text: func_decl --Pos: -1 -- Count: 1
+	|	|	|Text: func_header --Pos: -1 -- Count: 2
+	|	|	|	|Data: putint --Text: id --Pos: 2 -- Count: 0
+	|	|	|	|Text: param_list --Pos: -1 -- Count: 1
+	|	|	|	|	|Text: var --Pos: 1 -- Count: 0
+	|	|Text: func_decl --Pos: -1 -- Count: 1
+	|	|	|Text: func_header --Pos: -1 -- Count: 2
+	|	|	|	|Data: getchar --Text: id --Pos: 3 -- Count: 0
+	|	|	|	|Text: param_list --Pos: -1 -- Count: 0
+	|	|Text: func_defn --Pos: -1 -- Count: 2
+	|	|	|Text: func_header --Pos: -1 -- Count: 2
+	|	|	|	|Data: f --Text: id --Pos: 4 -- Count: 0
+	|	|	|	|Text: param_list --Pos: -1 -- Count: 1
+	|	|	|	|	|Text: var --Pos: 2 -- Count: 0
+	|	|	|Text: block --Pos: -1 -- Count: 1
+	|	|	|	|Text: if --Pos: 0 -- Count: 3
+	|	|	|	|	|Text: < --Pos: 0 -- Count: 2
+	|	|	|	|	|	|Text: svar --Pos: 2 -- Count: 0
+	|	|	|	|	|	|Text: num --Pos: 2 -- Count: 0
+	|	|	|	|	|Text: block --Pos: -1 -- Count: 1
+	|	|	|	|	|	|Text: return --Pos: -1 -- Count: 1
+	|	|	|	|	|	|	|Text: num --Pos: 1 -- Count: 0
+	|	|	|	|	|Text: block --Pos: -1 -- Count: 1
+	|	|	|	|	|	|Text: return --Pos: -1 -- Count: 1
+	|	|	|	|	|	|	|Text: + --Pos: 5 -- Count: 2
+	|	|	|	|	|	|	|	|Text: fcall --Pos: 2 -- Count: 2
+	|	|	|	|	|	|	|	|	|Data: f --Text: id --Pos: -1 -- Count: 0
+	|	|	|	|	|	|	|	|	|Text: arg_list --Pos: -1 -- Count: 1
+	|	|	|	|	|	|	|	|	|	|Text: - --Pos: 1 -- Count: 2
+	|	|	|	|	|	|	|	|	|	|	|Text: svar --Pos: 2 -- Count: 0
+	|	|	|	|	|	|	|	|	|	|	|Text: num --Pos: 1 -- Count: 0
+	|	|	|	|	|	|	|	|Text: fcall --Pos: 4 -- Count: 2
+	|	|	|	|	|	|	|	|	|Data: f --Text: id --Pos: -1 -- Count: 0
+	|	|	|	|	|	|	|	|	|Text: arg_list --Pos: -1 -- Count: 1
+	|	|	|	|	|	|	|	|	|	|Text: - --Pos: 3 -- Count: 2
+	|	|	|	|	|	|	|	|	|	|	|Text: svar --Pos: 2 -- Count: 0
+	|	|	|	|	|	|	|	|	|	|	|Text: num --Pos: 2 -- Count: 0
+	|	|Text: func_defn --Pos: -1 -- Count: 2
+	|	|	|Text: func_header --Pos: -1 -- Count: 2
+	|	|	|	|Data: g --Text: id --Pos: 5 -- Count: 0
+	|	|	|	|Text: param_list --Pos: -1 -- Count: 1
+	|	|	|	|	|Text: var --Pos: 3 -- Count: 0
+	|	|	|Text: block --Pos: -1 -- Count: 6
+	|	|	|	|Text: var --Pos: 4 -- Count: 1
+	|	|	|	|	|Text: num --Pos: 40 -- Count: 0
+	|	|	|	|Text: = --Pos: -1 -- Count: 2
+	|	|	|	|	|Text: cvar --Pos: 4 -- Count: 2
+	|	|	|	|	|	|Text: t --Pos: 6 -- Count: 0
+	|	|	|	|	|	|Text: num --Pos: 0 -- Count: 0
+	|	|	|	|	|Text: num --Pos: 1 -- Count: 0
+	|	|	|	|Text: var --Pos: 5 -- Count: 0
+	|	|	|	|Text: = --Pos: -1 -- Count: 2
+	|	|	|	|	|Text: svar --Pos: 5 -- Count: 0
+	|	|	|	|	|Text: num --Pos: 2 -- Count: 0
+	|	|	|	|Text: while --Pos: 1 -- Count: 2
+	|	|	|	|	|Text: < --Pos: 8 -- Count: 2
+	|	|	|	|	|	|Text: svar --Pos: 5 -- Count: 0
+	|	|	|	|	|	|Text: + --Pos: 7 -- Count: 2
+	|	|	|	|	|	|	|Text: svar --Pos: 3 -- Count: 0
+	|	|	|	|	|	|	|Text: num --Pos: 1 -- Count: 0
+	|	|	|	|	|Text: block --Pos: -1 -- Count: 1
+	|	|	|	|	|	|Text: = --Pos: -1 -- Count: 2
+	|	|	|	|	|	|	|Text: cvar --Pos: 4 -- Count: 2
+	|	|	|	|	|	|	|	|Text: t --Pos: 9 -- Count: 0
+	|	|	|	|	|	|	|	|Text: svar --Pos: 5 -- Count: 0
+	|	|	|	|	|	|	|Text: + --Pos: 14 -- Count: 2
+	|	|	|	|	|	|	|	|Text: cvar --Pos: 4 -- Count: 2
+	|	|	|	|	|	|	|	|	|Text: t --Pos: 11 -- Count: 0
+	|	|	|	|	|	|	|	|	|Text: - --Pos: 10 -- Count: 2
+	|	|	|	|	|	|	|	|	|	|Text: svar --Pos: 5 -- Count: 0
+	|	|	|	|	|	|	|	|	|	|Text: num --Pos: 1 -- Count: 0
+	|	|	|	|	|	|	|	|Text: cvar --Pos: 4 -- Count: 2
+	|	|	|	|	|	|	|	|	|Text: t --Pos: 13 -- Count: 0
+	|	|	|	|	|	|	|	|	|Text: - --Pos: 12 -- Count: 2
+	|	|	|	|	|	|	|	|	|	|Text: svar --Pos: 5 -- Count: 0
+	|	|	|	|	|	|	|	|	|	|Text: num --Pos: 2 -- Count: 0
+	|	|	|	|Text: return --Pos: -1 -- Count: 1
+	|	|	|	|	|Text: cvar --Pos: 4 -- Count: 2
+	|	|	|	|	|	|Text: t --Pos: 15 -- Count: 0
+	|	|	|	|	|	|Text: svar --Pos: 3 -- Count: 0
+	|	|Text: var --Pos: 6 -- Count: 0
+	|Text: main --Pos: 0 -- Count: 1
+	|	|Text: block --Pos: -1 -- Count: 7
+	|	|	|Text: = --Pos: -1 -- Count: 2
+	|	|	|	|Text: svar --Pos: 6 -- Count: 0
+	|	|	|	|Text: fcall --Pos: 16 -- Count: 2
+	|	|	|	|	|Data: getint --Text: id --Pos: -1 -- Count: 0
+	|	|	|	|	|Text: arg_list --Pos: -1 -- Count: 0
+	|	|	|Text: if --Pos: 3 -- Count: 2
+	|	|	|	|Text: || --Pos: 19 -- Count: 2
+	|	|	|	|	|Text: < --Pos: 17 -- Count: 2
+	|	|	|	|	|	|Text: svar --Pos: 6 -- Count: 0
+	|	|	|	|	|	|Text: num --Pos: 0 -- Count: 0
+	|	|	|	|	|Text: > --Pos: 18 -- Count: 2
+	|	|	|	|	|	|Text: svar --Pos: 6 -- Count: 0
+	|	|	|	|	|	|Text: num --Pos: 30 -- Count: 0
+	|	|	|	|Text: block --Pos: -1 -- Count: 1
+	|	|	|	|	|Text: return --Pos: -1 -- Count: 1
+	|	|	|	|	|	|Text: num --Pos: 1 -- Count: 0
+	|	|	|Text: fout --Pos: -1 -- Count: 1
+	|	|	|	|Text: fcall --Pos: 21 -- Count: 2
+	|	|	|	|	|Data: putint --Text: id --Pos: -1 -- Count: 0
+	|	|	|	|	|Text: arg_list --Pos: -1 -- Count: 1
+	|	|	|	|	|	|Text: fcall --Pos: 20 -- Count: 2
+	|	|	|	|	|	|	|Data: f --Text: id --Pos: -1 -- Count: 0
+	|	|	|	|	|	|	|Text: arg_list --Pos: -1 -- Count: 1
+	|	|	|	|	|	|	|	|Text: svar --Pos: 6 -- Count: 0
+	|	|	|Text: fout --Pos: -1 -- Count: 1
+	|	|	|	|Text: fcall --Pos: 22 -- Count: 2
+	|	|	|	|	|Data: putchar --Text: id --Pos: -1 -- Count: 0
+	|	|	|	|	|Text: arg_list --Pos: -1 -- Count: 1
+	|	|	|	|	|	|Text: num --Pos: 10 -- Count: 0
+	|	|	|Text: fout --Pos: -1 -- Count: 1
+	|	|	|	|Text: fcall --Pos: 24 -- Count: 2
+	|	|	|	|	|Data: putint --Text: id --Pos: -1 -- Count: 0
+	|	|	|	|	|Text: arg_list --Pos: -1 -- Count: 1
+	|	|	|	|	|	|Text: fcall --Pos: 23 -- Count: 2
+	|	|	|	|	|	|	|Data: g --Text: id --Pos: -1 -- Count: 0
+	|	|	|	|	|	|	|Text: arg_list --Pos: -1 -- Count: 1
+	|	|	|	|	|	|	|	|Text: svar --Pos: 6 -- Count: 0
+	|	|	|Text: fout --Pos: -1 -- Count: 1
+	|	|	|	|Text: fcall --Pos: 25 -- Count: 2
+	|	|	|	|	|Data: putchar --Text: id --Pos: -1 -- Count: 0
+	|	|	|	|	|Text: arg_list --Pos: -1 -- Count: 1
+	|	|	|	|	|	|Text: num --Pos: 10 -- Count: 0
+	|	|	|Text: return --Pos: -1 -- Count: 1
+	|	|	|	|Text: num --Pos: 0 -- Count: 0

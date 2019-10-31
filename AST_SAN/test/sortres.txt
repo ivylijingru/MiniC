@@ -1,0 +1,130 @@
+var t0
+var t1
+var t2
+var t3
+var t4
+var t5
+var t6
+var t7
+var t8
+var t9
+var t10
+var t11
+var t12
+var t13
+var t14
+var t15
+var t16
+var t17
+var t18
+var t19
+var t20
+var t21
+var t22
+var t23
+var t24
+var t25
+var t26
+var t27
+var t28
+var t29
+var t30
+var t31
+var t32
+var t33
+var t34
+var t35
+var t36
+var t37
+var T0
+f_bubblesort[1]
+  var T1
+  var T2
+  T1=0
+l3:
+  t0=T0 - 1
+  t1=T1 < t0
+  if t1==0 goto l4
+  T2=0
+l1:
+  t2=T0 - T1
+  t3=t2 - 1
+  t4=T2 < t3
+  if t4==0 goto l2
+  t5=4 * T2
+  t6=p0[t5]
+  t7=T2 + 1
+  t8=4 * t7
+  t9=p0[t8]
+  t10=t6 > t9
+  if t10==0 goto l0
+  var T3
+  t11=T2 + 1
+  t12=4 * t11
+  t13=p0[t12]
+  T3=t13
+  t14=T2 + 1
+  t15=4 * t14
+  t16=4 * T2
+  t17=p0[t16]
+  p0[t15]=t17
+  t18=4 * T2
+  p0[t18]=T3
+l0:
+  t19=T2 + 1
+  T2=t19
+  goto l1
+l2:
+  t20=T1 + 1
+  T1=t20
+  goto l3
+l4:
+  return 0
+end f_bubblesort
+f_main[0]
+  T0=10
+  var 40 T4
+  t21=4 * 0
+  T4[t21]=4
+  t22=4 * 1
+  T4[t22]=3
+  t23=4 * 2
+  T4[t23]=9
+  t24=4 * 3
+  T4[t24]=2
+  t25=4 * 4
+  T4[t25]=0
+  t26=4 * 5
+  T4[t26]=1
+  t27=4 * 6
+  T4[t27]=6
+  t28=4 * 7
+  T4[t28]=5
+  t29=4 * 8
+  T4[t29]=7
+  t30=4 * 9
+  T4[t30]=8
+  var T5
+  param T4
+  t31 = call f_bubblesort
+  T5=t31
+l5:
+  t32=T5 < T0
+  if t32==0 goto l6
+  var T6
+  t33=4 * T5
+  t34=T4[t33]
+  T6=t34
+  param T6
+  t35 = call f_putint
+  T6=t35
+  T6=10
+  param T6
+  t36 = call f_putchar
+  T6=t36
+  t37=T5 + 1
+  T5=t37
+  goto l5
+l6:
+  return 0
+end f_main

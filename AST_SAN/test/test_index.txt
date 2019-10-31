@@ -1,0 +1,29 @@
+var t0
+var t1
+var t2
+var t3
+var t4
+var t5
+var t6
+var t7
+var t8
+var t9
+f_main[0]
+  var 400 T0
+  var T1
+  var T2
+  T1=3
+  T2=1
+  t0=T1 + T2
+  t1=T1 / T2
+  t2=t0 + t1
+  t3=T1 % T2
+  t4=t2 - t3
+  t5= ! 5
+  t6=t4 + t5
+  t7=4 * t6
+  t8=T0[t7]
+  param t8
+  t9 = call f_putint
+  return 0
+end f_main

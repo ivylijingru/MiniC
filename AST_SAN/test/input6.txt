@@ -1,0 +1,172 @@
+///////begin//////////////begin///////#############i, 0
+########end################end########///////begin//////////////begin///////########end################end#####################n, 0
+///////begin//////////////begin///////#############p, 0
+#############a, 1
+#############b, 2
+#############c, 3
+#############a, -1
+#############a, 1
+#############b, -1
+#############b, 2
+#############p, 0
+#############p, 0
+///////begin///////########end#####################p, 0
+#############p, 0
+///////begin///////########end#####################p, 0
+#############p, 0
+///////begin///////#############c, -1
+#############c, 3
+#############a, -1
+#############a, 1
+#############b, -1
+#############b, 2
+#############a, -1
+#############a, 1
+#############b, -1
+#############b, 2
+#############b, -1
+#############b, 2
+#############c, -1
+#############c, 3
+#############p, 0
+#############p, 0
+#############p, 0
+#############p, 0
+########end#####################c, -1
+#############c, 3
+########end################end########///////begin///////#############n, -1
+#############n, 0
+#############res, 4
+#############res, -1
+#############res, 4
+#############n, -1
+#############n, 0
+#############res, -1
+#############res, 4
+########end########PARSE SUCESSFUL!
+var t0
+var t1
+var t2
+var t3
+var t4
+var t5
+var t6
+var T0
+f_fib[1]
+  var T1
+  var T2
+  var T3
+  T1=0
+  T2=1
+  t0=p0 == 0
+  if t0==0 goto l0
+  return 0
+l0:
+  t1=p0 == 1
+  if t1==0 goto l1
+  return 1
+l1:
+l2:
+  t2=p0 > 1
+  if t2==0 goto l3
+  t3=T1 + T2
+  T3=t3
+  T1=T2
+  T2=T3
+  t4=p0 - 1
+  p0=t4
+  goto l2
+l3:
+  return T3
+end f_fib
+f_main[0]
+  t5 = call f_getint
+  T0=t5
+  var T4
+  param T0
+  t6 = call f_fib
+  T4=t6
+  return T4
+end f_main
+Text: root --Pos: -1 -- Count: 2
+	|Text: func_decl_list --Pos: -1 -- Count: 4
+	|	|Text: func_decl --Pos: -1 -- Count: 1
+	|	|	|Text: func_header --Pos: -1 -- Count: 2
+	|	|	|	|Data: putint --Text: id --Pos: 0 -- Count: 0
+	|	|	|	|Text: param_list --Pos: -1 -- Count: 1
+	|	|	|	|	|Text: newps --Pos: 0 -- Count: 0
+	|	|Text: func_decl --Pos: -1 -- Count: 1
+	|	|	|Text: func_header --Pos: -1 -- Count: 2
+	|	|	|	|Data: getint --Text: id --Pos: 1 -- Count: 0
+	|	|	|	|Text: param_list --Pos: -1 -- Count: 0
+	|	|Text: var --Pos: 0 -- Count: 0
+	|	|Text: func_defn --Pos: -1 -- Count: 2
+	|	|	|Text: func_header --Pos: -1 -- Count: 2
+	|	|	|	|Data: fib --Text: id --Pos: 2 -- Count: 0
+	|	|	|	|Text: param_list --Pos: -1 -- Count: 1
+	|	|	|	|	|Text: newps --Pos: 0 -- Count: 0
+	|	|	|Text: block --Pos: -1 -- Count: 9
+	|	|	|	|Text: var --Pos: 1 -- Count: 0
+	|	|	|	|Text: var --Pos: 2 -- Count: 0
+	|	|	|	|Text: var --Pos: 3 -- Count: 0
+	|	|	|	|Text: = --Pos: -1 -- Count: 2
+	|	|	|	|	|Text: svar --Pos: 1 -- Count: 0
+	|	|	|	|	|Text: num --Pos: 0 -- Count: 0
+	|	|	|	|Text: = --Pos: -1 -- Count: 2
+	|	|	|	|	|Text: svar --Pos: 2 -- Count: 0
+	|	|	|	|	|Text: num --Pos: 1 -- Count: 0
+	|	|	|	|Text: if --Pos: 0 -- Count: 2
+	|	|	|	|	|Text: == --Pos: 0 -- Count: 2
+	|	|	|	|	|	|Text: psvar --Pos: 0 -- Count: 0
+	|	|	|	|	|	|Text: num --Pos: 0 -- Count: 0
+	|	|	|	|	|Text: block --Pos: -1 -- Count: 1
+	|	|	|	|	|	|Text: block --Pos: -1 -- Count: 1
+	|	|	|	|	|	|	|Text: return --Pos: -1 -- Count: 1
+	|	|	|	|	|	|	|	|Text: num --Pos: 0 -- Count: 0
+	|	|	|	|Text: if --Pos: 1 -- Count: 2
+	|	|	|	|	|Text: == --Pos: 1 -- Count: 2
+	|	|	|	|	|	|Text: psvar --Pos: 0 -- Count: 0
+	|	|	|	|	|	|Text: num --Pos: 1 -- Count: 0
+	|	|	|	|	|Text: block --Pos: -1 -- Count: 1
+	|	|	|	|	|	|Text: block --Pos: -1 -- Count: 1
+	|	|	|	|	|	|	|Text: return --Pos: -1 -- Count: 1
+	|	|	|	|	|	|	|	|Text: num --Pos: 1 -- Count: 0
+	|	|	|	|Text: while --Pos: 2 -- Count: 2
+	|	|	|	|	|Text: > --Pos: 2 -- Count: 2
+	|	|	|	|	|	|Text: psvar --Pos: 0 -- Count: 0
+	|	|	|	|	|	|Text: num --Pos: 1 -- Count: 0
+	|	|	|	|	|Text: block --Pos: -1 -- Count: 4
+	|	|	|	|	|	|Text: = --Pos: -1 -- Count: 2
+	|	|	|	|	|	|	|Text: svar --Pos: 3 -- Count: 0
+	|	|	|	|	|	|	|Text: + --Pos: 3 -- Count: 2
+	|	|	|	|	|	|	|	|Text: svar --Pos: 1 -- Count: 0
+	|	|	|	|	|	|	|	|Text: svar --Pos: 2 -- Count: 0
+	|	|	|	|	|	|Text: = --Pos: -1 -- Count: 2
+	|	|	|	|	|	|	|Text: svar --Pos: 1 -- Count: 0
+	|	|	|	|	|	|	|Text: svar --Pos: 2 -- Count: 0
+	|	|	|	|	|	|Text: = --Pos: -1 -- Count: 2
+	|	|	|	|	|	|	|Text: svar --Pos: 2 -- Count: 0
+	|	|	|	|	|	|	|Text: svar --Pos: 3 -- Count: 0
+	|	|	|	|	|	|Text: = --Pos: -1 -- Count: 2
+	|	|	|	|	|	|	|Text: psvar --Pos: 0 -- Count: 0
+	|	|	|	|	|	|	|Text: - --Pos: 4 -- Count: 2
+	|	|	|	|	|	|	|	|Text: psvar --Pos: 0 -- Count: 0
+	|	|	|	|	|	|	|	|Text: num --Pos: 1 -- Count: 0
+	|	|	|	|Text: return --Pos: -1 -- Count: 1
+	|	|	|	|	|Text: svar --Pos: 3 -- Count: 0
+	|Text: main --Pos: 0 -- Count: 1
+	|	|Text: block --Pos: -1 -- Count: 4
+	|	|	|Text: = --Pos: -1 -- Count: 2
+	|	|	|	|Text: svar --Pos: 0 -- Count: 0
+	|	|	|	|Text: fcall --Pos: 5 -- Count: 2
+	|	|	|	|	|Data: getint --Text: id --Pos: -1 -- Count: 0
+	|	|	|	|	|Text: arg_list --Pos: -1 -- Count: 0
+	|	|	|Text: var --Pos: 4 -- Count: 0
+	|	|	|Text: = --Pos: -1 -- Count: 2
+	|	|	|	|Text: svar --Pos: 4 -- Count: 0
+	|	|	|	|Text: fcall --Pos: 6 -- Count: 2
+	|	|	|	|	|Data: fib --Text: id --Pos: -1 -- Count: 0
+	|	|	|	|	|Text: arg_list --Pos: -1 -- Count: 1
+	|	|	|	|	|	|Text: svar --Pos: 0 -- Count: 0
+	|	|	|Text: return --Pos: -1 -- Count: 1
+	|	|	|	|Text: svar --Pos: 4 -- Count: 0

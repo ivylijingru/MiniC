@@ -1,0 +1,98 @@
+var t0
+var t1
+var t2
+var t3
+var t4
+var t5
+var t6
+var t7
+var t8
+var t9
+var t10
+var t11
+var t12
+var t13
+var t14
+var t15
+var t16
+var t17
+var t18
+var t19
+var t20
+var t21
+var t22
+var t23
+var t24
+var t25
+var t26
+var t27
+var t28
+f_f[1]
+  t0=p0 < 2
+  if t0==0 goto l0
+  return 1
+  goto l1
+l0:
+  t1=p0 - 1
+  param t1
+  t2 = call f_f
+  t3=p0 - 2
+  param t3
+  t4 = call f_f
+  t5=t2 + t4
+  return t5
+l1:
+end f_f
+f_g[1]
+  var 160 T0
+  t6=4 * 0
+  T0[t6]=1
+  var T1
+  T1=2
+l2:
+  t7=p0 + 1
+  t8=T1 < t7
+  if t8==0 goto l3
+  t9=4 * T1
+  t10=T1 - 1
+  t11=4 * t10
+  t12=T0[t11]
+  t13=T1 - 2
+  t14=4 * t13
+  t15=T0[t14]
+  t16=t12 + t15
+  T0[t9]=t16
+  goto l2
+l3:
+  t17=4 * p0
+  t18=T0[t17]
+  return t18
+end f_g
+var T2
+f_main[0]
+  t19 = call f_getint
+  T2=t19
+  t20=T2 < 0
+  t21=T2 > 30
+  t22=t20 || t21
+  if t22==0 goto l4
+  return 1
+l4:
+  param T2
+  t23 = call f_f
+  param t23
+  t24 = call f_putint
+  call f_putint
+  param 10
+  t25 = call f_putchar
+  call f_putchar
+  param T2
+  t26 = call f_g
+  param t26
+  t27 = call f_putint
+  call f_putint
+  param 10
+  t28 = call f_putchar
+  call f_putchar
+  return 0
+end f_main

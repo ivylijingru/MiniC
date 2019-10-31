@@ -1,0 +1,14 @@
+int a;
+int b;
+int f();
+int f();
+int g();
+int g(){
+    return 0;
+}
+int main(){
+	int a;
+    a = g();
+    a = g(a);
+    return 0;
+}

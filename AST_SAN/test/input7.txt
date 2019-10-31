@@ -1,0 +1,132 @@
+PARSE SUCESSFUL!
+var t0
+var t1
+var t2
+var t3
+var t4
+var t5
+var t6
+var t7
+var t8
+var t9
+var t10
+var T0
+var 10 T1
+f_main[0]
+  t0 = call f_getint
+  T0=t0
+  t1=T0 > 10
+  if t1==0 goto l0
+  return 1
+l0:
+  var T2
+  var T3
+  T3=0
+  T2=T3
+l1:
+  t2=T3 < T0
+  if t2==0 goto l2
+  t3=4 * T3
+  t4 = call f_getint
+  T1[t3]=t4
+  t5=4 * T3
+  t6=T1[t5]
+  t7=T2 + t6
+  T2=t7
+  t8=T3 + 1
+  T3=t8
+  goto l1
+l2:
+  param T2
+  t9 = call f_putint
+  T0=t9
+  var T4
+  T4=10
+  param T4
+  t10 = call f_putchar
+  T0=t10
+  return T2
+end f_main
+Text: root --Pos: -1 -- Count: 2
+	|Text: func_decl_list --Pos: -1 -- Count: 5
+	|	|Text: func_decl --Pos: -1 -- Count: 1
+	|	|	|Text: func_header --Pos: -1 -- Count: 2
+	|	|	|	|Data: getint --Text: id --Pos: 0 -- Count: 0
+	|	|	|	|Text: param_list --Pos: -1 -- Count: 0
+	|	|Text: func_decl --Pos: -1 -- Count: 1
+	|	|	|Text: func_header --Pos: -1 -- Count: 2
+	|	|	|	|Data: putint --Text: id --Pos: 1 -- Count: 0
+	|	|	|	|Text: param_list --Pos: -1 -- Count: 1
+	|	|	|	|	|Text: newps --Pos: 0 -- Count: 0
+	|	|Text: func_decl --Pos: -1 -- Count: 1
+	|	|	|Text: func_header --Pos: -1 -- Count: 2
+	|	|	|	|Data: putchar --Text: id --Pos: 2 -- Count: 0
+	|	|	|	|Text: param_list --Pos: -1 -- Count: 1
+	|	|	|	|	|Text: newps --Pos: 0 -- Count: 0
+	|	|Text: var --Pos: 0 -- Count: 0
+	|	|Text: var --Pos: 1 -- Count: 1
+	|	|	|Text: num --Pos: 10 -- Count: 0
+	|Text: main --Pos: 0 -- Count: 1
+	|	|Text: block --Pos: -1 -- Count: 12
+	|	|	|Text: = --Pos: -1 -- Count: 2
+	|	|	|	|Text: svar --Pos: 0 -- Count: 0
+	|	|	|	|Text: fcall --Pos: 0 -- Count: 2
+	|	|	|	|	|Data: getint --Text: id --Pos: -1 -- Count: 0
+	|	|	|	|	|Text: arg_list --Pos: -1 -- Count: 0
+	|	|	|Text: if --Pos: 0 -- Count: 2
+	|	|	|	|Text: > --Pos: 1 -- Count: 2
+	|	|	|	|	|Text: svar --Pos: 0 -- Count: 0
+	|	|	|	|	|Text: num --Pos: 10 -- Count: 0
+	|	|	|	|Text: block --Pos: -1 -- Count: 1
+	|	|	|	|	|Text: return --Pos: -1 -- Count: 1
+	|	|	|	|	|	|Text: num --Pos: 1 -- Count: 0
+	|	|	|Text: var --Pos: 2 -- Count: 0
+	|	|	|Text: var --Pos: 3 -- Count: 0
+	|	|	|Text: = --Pos: -1 -- Count: 2
+	|	|	|	|Text: svar --Pos: 3 -- Count: 0
+	|	|	|	|Text: num --Pos: 0 -- Count: 0
+	|	|	|Text: = --Pos: -1 -- Count: 2
+	|	|	|	|Text: svar --Pos: 2 -- Count: 0
+	|	|	|	|Text: svar --Pos: 3 -- Count: 0
+	|	|	|Text: while --Pos: 1 -- Count: 2
+	|	|	|	|Text: < --Pos: 2 -- Count: 2
+	|	|	|	|	|Text: svar --Pos: 3 -- Count: 0
+	|	|	|	|	|Text: svar --Pos: 0 -- Count: 0
+	|	|	|	|Text: block --Pos: -1 -- Count: 3
+	|	|	|	|	|Text: = --Pos: -1 -- Count: 2
+	|	|	|	|	|	|Text: lcvar --Pos: 1 -- Count: 2
+	|	|	|	|	|	|	|Text: t --Pos: 3 -- Count: 0
+	|	|	|	|	|	|	|Text: svar --Pos: 3 -- Count: 0
+	|	|	|	|	|	|Text: fcall --Pos: 4 -- Count: 2
+	|	|	|	|	|	|	|Data: getint --Text: id --Pos: -1 -- Count: 0
+	|	|	|	|	|	|	|Text: arg_list --Pos: -1 -- Count: 0
+	|	|	|	|	|Text: = --Pos: -1 -- Count: 2
+	|	|	|	|	|	|Text: svar --Pos: 2 -- Count: 0
+	|	|	|	|	|	|Text: + --Pos: 7 -- Count: 2
+	|	|	|	|	|	|	|Text: svar --Pos: 2 -- Count: 0
+	|	|	|	|	|	|	|Text: rcvar --Pos: 1 -- Count: 2
+	|	|	|	|	|	|	|	|Text: t --Pos: 5 -- Count: 0
+	|	|	|	|	|	|	|	|Text: svar --Pos: 3 -- Count: 0
+	|	|	|	|	|Text: = --Pos: -1 -- Count: 2
+	|	|	|	|	|	|Text: svar --Pos: 3 -- Count: 0
+	|	|	|	|	|	|Text: + --Pos: 8 -- Count: 2
+	|	|	|	|	|	|	|Text: svar --Pos: 3 -- Count: 0
+	|	|	|	|	|	|	|Text: num --Pos: 1 -- Count: 0
+	|	|	|Text: = --Pos: -1 -- Count: 2
+	|	|	|	|Text: svar --Pos: 0 -- Count: 0
+	|	|	|	|Text: fcall --Pos: 9 -- Count: 2
+	|	|	|	|	|Data: putint --Text: id --Pos: -1 -- Count: 0
+	|	|	|	|	|Text: arg_list --Pos: -1 -- Count: 1
+	|	|	|	|	|	|Text: svar --Pos: 2 -- Count: 0
+	|	|	|Text: var --Pos: 4 -- Count: 0
+	|	|	|Text: = --Pos: -1 -- Count: 2
+	|	|	|	|Text: svar --Pos: 4 -- Count: 0
+	|	|	|	|Text: num --Pos: 10 -- Count: 0
+	|	|	|Text: = --Pos: -1 -- Count: 2
+	|	|	|	|Text: svar --Pos: 0 -- Count: 0
+	|	|	|	|Text: fcall --Pos: 10 -- Count: 2
+	|	|	|	|	|Data: putchar --Text: id --Pos: -1 -- Count: 0
+	|	|	|	|	|Text: arg_list --Pos: -1 -- Count: 1
+	|	|	|	|	|	|Text: svar --Pos: 4 -- Count: 0
+	|	|	|Text: return --Pos: -1 -- Count: 1
+	|	|	|	|Text: svar --Pos: 2 -- Count: 0
