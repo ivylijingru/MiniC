@@ -272,3 +272,5 @@ void StmNode::MemoryPlan(string inFunction) {
     }
 }
 ```
+- 调用者保存寄存器：在 `call` 之前 store，调用后 load
+- 被调用者保存寄存器：在函数体开始时 store，函数体结束时 load
