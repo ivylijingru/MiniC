@@ -227,3 +227,48 @@ set<int> StmNode::LookupUsedReg() {
     return usedReg;
 }
 ```
+### 栈内存分配
+```C++
+void StmNode::MemoryPlan(string inFunction) {
+//InsertStack 实现的方式是，如果在栈中没有找到该变量则将它插入到栈里。
+//先存储被 load 和 store 的（溢出到栈中）
+    for (int n : GetLoadSymbol()) {
+        string varia = SymTable::index2var[n];
+        SymTable::InsertStack(varia);
+    }
+
+    for (int n : GetStoreSymbol()) {
+        string varia = SymTable::index2var[n];
+        SymTable::InsertStack(varia);
+    }
+
+    switch (kind) {
+        case CALLFU_KIND: { //函数调用，保存调用者保存寄存器
+            for (int n : SymTable::funUsedCallerSaveReg[inFunction]) {
+                SymTable::InsertStack(SymTable::color2reg[n]);
+            }
+            break;
+        }
+        case PUSHVR_KIND: { //局部数组定义，分配 memory/4 块空间
+            string varia = child[0]->GetName();
+            int memory = child[1]->GetValue();
+            SymTable::InsertStack(varia, memory);
+            break;
+        }
+        case LOADAL_KIND: { //局部变量
+            string varia = child[0]->GetName();
+            SymTable::InsertStack(varia);
+            break;
+        }
+        case SEQUEN_KIND: { //一个序列，则分别分配栈
+            if (child[0] != nullptr) {
+                child[0]->MemoryPlan(inFunction);
+            }
+            if (child[1] != nullptr) {
+                child[1]->MemoryPlan(inFunction);
+            }
+            break;
+        }
+    }
+}
+```
